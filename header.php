@@ -36,28 +36,3 @@
   </head>
   <body <?php body_class(); ?>>
     <main>
-      <section class="home" id="home">
-        <div class="container">
-          <header class="menu" data-aos="fade-down">
-            <a href="#home" class="logo">
-              <img src="./img/logo.png" alt="" />
-            </a>
-            <nav>
-              <button class="btn btn-mobile-menu">
-                <div></div>
-                <div></div>
-                <div></div>
-              </button>
-              <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about-us">Sobre Nós</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#get-in-touch">Contato</a></li>
-                <li>
-                  <a target="_blank" href="#" class="btn btn-pink"
-                    >Conheça a Fabulos</a
-                  >
-                </li>
-              </ul>
-            </nav>
-          </header>
