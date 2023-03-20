@@ -1,3 +1,14 @@
+/*
+Theme Name: Fabulos
+Author: Waboo Creatives
+Author URI: https://waboo.com.br/
+Description: A special theme created to Fabulos by Waboo Creative. 
+Tested up to: 6.1
+Requires PHP: 8.1
+Version: 1
+
+*/
+
 @keyframes floating {
   0% {
     transform: translateX(0rem);
