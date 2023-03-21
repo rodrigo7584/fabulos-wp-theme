@@ -629,7 +629,7 @@
             if(get_theme_mod('setting_get_in_touch_email')){
               echo get_theme_mod('setting_get_in_touch_email');
             }else{
-              echo ('rodrigo.gandhi.oliveira@gmail.com');
+              echo ('oi@fabulos.com');
             };
           ?>"
           method="POST"
