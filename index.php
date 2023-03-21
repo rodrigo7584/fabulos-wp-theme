@@ -3,7 +3,7 @@
   <div class="container">
     <header class="menu" data-aos="fade-down">
       <a href="#home" class="logo">
-        <img src="./img/logo.png" alt="" />
+        <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="" />
       </a>
       <nav>
         <button class="btn btn-mobile-menu">
@@ -26,19 +26,27 @@
     </header>
     <div class="row">
       <img
-        src="./img/illustration-paper-plane.png"
+        src="<?php echo get_template_directory_uri(); ?>/img/illustration-paper-plane.png"
         alt=""
         class="airplane"
       />
-      <img src="./img/illustration-cloud.png" alt="" class="cloud" />
-      <img src="./img/illustration-cloud-2.png" alt="" class="cloud2" />
+      <img src="<?php echo get_template_directory_uri(); ?>/img/illustration-cloud.png" alt="" class="cloud" />
+      <img src="<?php echo get_template_directory_uri(); ?>/img/illustration-cloud-2.png" alt="" class="cloud2" />
       <div class="col">
         <h1 class="title-crown">
-          Tenha um momento de qualidade com seu filho
+          <?php if(get_theme_mod('setting_home_title')){
+            echo get_theme_mod('setting_home_title');
+          }else{
+            echo ('Tenha um momento de qualidade com seu filho');
+          };?>
         </h1>
         <p>
-          <strong>Conte histórias personalizadas</strong> do jeito que ele
-          gosta e estimule a imaginação e a criatividade.
+        <?php if(get_theme_mod('setting_home_subtitle')){
+          echo get_theme_mod('setting_home_subtitle');
+        }else{
+          echo (' <strong>Conte histórias personalizadas</strong> do jeito que ele
+          gosta e estimule a imaginação e a criatividade.');
+        };?>
         </p>
         <div class="box-buttons">
           <a href="#" class="btn btn-pink">Conheça a Fabulos</a>
@@ -48,7 +56,7 @@
       <div class="col">
         <img
           class="home-illustration"
-          src="./img/illustration-castle.png"
+          src="<?php echo get_template_directory_uri(); ?>/img/illustration-castle.png"
           alt=""
         />
       </div>
@@ -58,12 +66,12 @@
 <section class="about-us" id="about-us">
   <div class="container">
     <div class="row row-about-us">
-      <img src="./img/illustration-cloud-2.png" alt="" class="cloud" />
-      <!-- <img src="./img/illustration-cloud.png" alt="" class="cloud2" /> -->
+      <img src="<?php echo get_template_directory_uri(); ?>/img/illustration-cloud-2.png" alt="" class="cloud" />
+      <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/illustration-cloud.png" alt="" class="cloud2" /> -->
       <div class="col">
         <img
           class="about-us-illustration"
-          src="./img/illustration-king.png"
+          src="<?php echo get_template_directory_uri(); ?>/img/illustration-king.png"
           alt=""
         />
       </div>
@@ -81,10 +89,10 @@
         </p>
         <div class="box-buttons">
           <a href="#" class="btn btn-play-store"
-            ><img src="./img/google-play-badge.svg" alt=""
+            ><img src="<?php echo get_template_directory_uri(); ?>/img/google-play-badge.svg" alt=""
           /></a>
           <a href="#" class="btn btn-apple-store"
-            ><img src="./img/apple-store-badge.svg" alt=""
+            ><img src="<?php echo get_template_directory_uri(); ?>/img/apple-store-badge.svg" alt=""
           /></a>
         </div>
       </div>
@@ -96,24 +104,24 @@
         <h2 class="title-crown">Conheça nosso app</h2>
         <div class="caroucel caroucel-our-app">
           <div aria-label="Previous" class="controls btn btn-back">
-            <img src="./img/icon-right-arrow.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-right-arrow.png" alt="" />
           </div>
           <div class="caroucel-content">
             <div class="slide slide-1">
-              <img src="./img/cellphone-1.png" alt="" />
+              <img src="<?php echo get_template_directory_uri(); ?>/img/cellphone-1.png" alt="" />
             </div>
             <div class="slide slide-2">
-              <img src="./img/cellphone-2.png" alt="" />
+              <img src="<?php echo get_template_directory_uri(); ?>/img/cellphone-2.png" alt="" />
             </div>
             <div class="slide slide-3">
-              <img src="./img/cellphone-3.png" alt="" />
+              <img src="<?php echo get_template_directory_uri(); ?>/img/cellphone-3.png" alt="" />
             </div>
             <div class="slide slide-4">
-              <img src="./img/cellphone-4.png" alt="" />
+              <img src="<?php echo get_template_directory_uri(); ?>/img/cellphone-4.png" alt="" />
             </div>
           </div>
           <div aria-label="Next" class="controls btn btn-next">
-            <img src="./img/icon-left-arrow.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-left-arrow.png" alt="" />
           </div>
         </div>
       </div>
@@ -123,7 +131,7 @@
 <section class="comments">
   <div class="container">
     <div class="row">
-      <img src="./img/illustration-cloud.png" alt="" class="cloud" />
+      <img src="<?php echo get_template_directory_uri(); ?>/img/illustration-cloud.png" alt="" class="cloud" />
       <div class="col">
         <h2 class="title-crown">
           Depoimentos de pais que já usaram o aplicativo:
@@ -134,13 +142,13 @@
       <div class="col">
         <div class="caroucel caroucel-comments">
           <div aria-label="Previous" class="controls btn btn-back">
-            <img src="./img/icon-right-arrow-2.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-right-arrow-2.png" alt="" />
           </div>
           <div class="caroucel-content">
             <div class="slide slide-1">
               <div class="comment-box">
                 <img
-                  src="./img/icon-commentary.png"
+                  src="<?php echo get_template_directory_uri(); ?>/img/icon-commentary.png"
                   alt=""
                   class="icon"
                 />
@@ -151,11 +159,11 @@
                 <div class="name-evaluation">
                   <p>João S.</p>
                   <div class="evaluation">
-                    <img src="./img/icon-star.png" alt="" />
-                    <img src="./img/icon-star.png" alt="" />
-                    <img src="./img/icon-star.png" alt="" />
-                    <img src="./img/icon-star.png" alt="" />
-                    <img src="./img/icon-star.png" alt="" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/icon-star.png" alt="" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/icon-star.png" alt="" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/icon-star.png" alt="" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/icon-star.png" alt="" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/icon-star.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -163,7 +171,7 @@
             <div class="slide slide-2">
               <div class="comment-box">
                 <img
-                  src="./img/icon-commentary.png"
+                  src="<?php echo get_template_directory_uri(); ?>/img/icon-commentary.png"
                   alt=""
                   class="icon"
                 />
@@ -174,11 +182,11 @@
                 <div class="name-evaluation">
                   <p>João S.</p>
                   <div class="evaluation">
-                    <img src="./img/icon-star.png" alt="" />
-                    <img src="./img/icon-star.png" alt="" />
-                    <img src="./img/icon-star.png" alt="" />
-                    <img src="./img/icon-star.png" alt="" />
-                    <img src="./img/icon-star.png" alt="" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/icon-star.png" alt="" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/icon-star.png" alt="" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/icon-star.png" alt="" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/icon-star.png" alt="" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/icon-star.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -186,7 +194,7 @@
             <div class="slide slide-3">
               <div class="comment-box">
                 <img
-                  src="./img/icon-commentary.png"
+                  src="<?php echo get_template_directory_uri(); ?>/img/icon-commentary.png"
                   alt=""
                   class="icon"
                 />
@@ -197,11 +205,11 @@
                 <div class="name-evaluation">
                   <p>João S.</p>
                   <div class="evaluation">
-                    <img src="./img/icon-star.png" alt="" />
-                    <img src="./img/icon-star.png" alt="" />
-                    <img src="./img/icon-star.png" alt="" />
-                    <img src="./img/icon-star.png" alt="" />
-                    <img src="./img/icon-star.png" alt="" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/icon-star.png" alt="" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/icon-star.png" alt="" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/icon-star.png" alt="" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/icon-star.png" alt="" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/icon-star.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -209,7 +217,7 @@
             <div class="slide slide-4">
               <div class="comment-box">
                 <img
-                  src="./img/icon-commentary.png"
+                  src="<?php echo get_template_directory_uri(); ?>/img/icon-commentary.png"
                   alt=""
                   class="icon"
                 />
@@ -220,18 +228,18 @@
                 <div class="name-evaluation">
                   <p>João S.</p>
                   <div class="evaluation">
-                    <img src="./img/icon-star.png" alt="" />
-                    <img src="./img/icon-star.png" alt="" />
-                    <img src="./img/icon-star.png" alt="" />
-                    <img src="./img/icon-star.png" alt="" />
-                    <img src="./img/icon-star.png" alt="" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/icon-star.png" alt="" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/icon-star.png" alt="" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/icon-star.png" alt="" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/icon-star.png" alt="" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/icon-star.png" alt="" />
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div aria-label="Next" class="controls btn btn-next">
-            <img src="./img/icon-left-arrow-2.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-left-arrow-2.png" alt="" />
           </div>
         </div>
       </div>
@@ -246,10 +254,10 @@
         </p>
         <div class="box-buttons">
           <a href="#" class="btn btn-play-store"
-            ><img src="./img/google-play-badge.svg" alt=""
+            ><img src="<?php echo get_template_directory_uri(); ?>/img/google-play-badge.svg" alt=""
           /></a>
           <a href="#" class="btn btn-apple-store"
-            ><img src="./img/apple-store-badge.svg" alt=""
+            ><img src="<?php echo get_template_directory_uri(); ?>/img/apple-store-badge.svg" alt=""
           /></a>
         </div>
       </div>
@@ -259,10 +267,10 @@
 <section class="faq" id="faq">
   <div class="container">
     <div class="row">
-      <img src="./img/illustration-cloud-2.png" alt="" class="cloud" />
-      <img src="./img/illustration-cloud.png" alt="" class="cloud2" />
+      <img src="<?php echo get_template_directory_uri(); ?>/img/illustration-cloud-2.png" alt="" class="cloud" />
+      <img src="<?php echo get_template_directory_uri(); ?>/img/illustration-cloud.png" alt="" class="cloud2" />
       <img
-        src="./img/illustration-paper-plane-2.png"
+        src="<?php echo get_template_directory_uri(); ?>/img/illustration-paper-plane-2.png"
         alt=""
         class="airplane"
       />
@@ -271,7 +279,7 @@
         <div class="accordion">
           <div class="question">
             <p>O que é Fabulos?</p>
-            <img src="./img/icon-question.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-question.png" alt="" />
           </div>
           <div class="answer">
             <div class="content">
@@ -282,7 +290,7 @@
               </p>
             </div>
 
-            <img src="./img/icon-question-2.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-question-2.png" alt="" />
           </div>
         </div>
         <div class="accordion">
@@ -291,7 +299,7 @@
               Quais são os benefícios de utilizar a Fabulos para contar
               histórias personalizadas?
             </p>
-            <img src="./img/icon-question.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-question.png" alt="" />
           </div>
           <div class="answer">
             <div class="content">
@@ -339,13 +347,13 @@
                 </li>
               </ul>
             </div>
-            <img src="./img/icon-question-2.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-question-2.png" alt="" />
           </div>
         </div>
         <div class="accordion">
           <div class="question">
             <p>Quanto custa o aplicativo Fabulos?</p>
-            <img src="./img/icon-question.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-question.png" alt="" />
           </div>
           <div class="answer">
             <div class="content">
@@ -355,13 +363,13 @@
                 19,90 e o plano anual a R$ 199,00.
               </p>
             </div>
-            <img src="./img/icon-question-2.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-question-2.png" alt="" />
           </div>
         </div>
         <div class="accordion">
           <div class="question">
             <p>Qual a diferença entre o plano gratuito e o pago?</p>
-            <img src="./img/icon-question.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-question.png" alt="" />
           </div>
           <div class="answer">
             <div class="content">
@@ -374,13 +382,13 @@
               </p>
             </div>
 
-            <img src="./img/icon-question-2.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-question-2.png" alt="" />
           </div>
         </div>
         <div class="accordion">
           <div class="question">
             <p>O que é incluso no plano pago do Fabulos?</p>
-            <img src="./img/icon-question.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-question.png" alt="" />
           </div>
           <div class="answer">
             <div class="content">
@@ -391,13 +399,13 @@
               </p>
             </div>
 
-            <img src="./img/icon-question-2.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-question-2.png" alt="" />
           </div>
         </div>
         <div class="accordion">
           <div class="question">
             <p>O que são as fábulas do dia?</p>
-            <img src="./img/icon-question.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-question.png" alt="" />
           </div>
           <div class="answer">
             <div class="content">
@@ -406,13 +414,13 @@
                 leitura no aplicativo de forma gratuíta
               </p>
             </div>
-            <img src="./img/icon-question-2.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-question-2.png" alt="" />
           </div>
         </div>
         <div class="accordion">
           <div class="question">
             <p>O que são atividades educacionais personalizadas?</p>
-            <img src="./img/icon-question.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-question.png" alt="" />
           </div>
           <div class="answer">
             <div class="content">
@@ -423,7 +431,7 @@
                 partir das histórias contadas.
               </p>
             </div>
-            <img src="./img/icon-question-2.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-question-2.png" alt="" />
           </div>
         </div>
         <div class="accordion">
@@ -432,7 +440,7 @@
               Quantas histórias personalizadas posso criar no plano
               gratuito?
             </p>
-            <img src="./img/icon-question.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-question.png" alt="" />
           </div>
           <div class="answer">
             <div class="content">
@@ -441,7 +449,7 @@
                 personalizadas por mês.
               </p>
             </div>
-            <img src="./img/icon-question-2.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-question-2.png" alt="" />
           </div>
         </div>
         <div class="accordion">
@@ -450,7 +458,7 @@
               Como posso entrar em contato com o suporte técnico da
               Fabulos?
             </p>
-            <img src="./img/icon-question.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-question.png" alt="" />
           </div>
           <div class="answer">
             <div class="content">
@@ -459,7 +467,7 @@
                 do Fabulos através do e-mail de suporte oi@fabulos.com.br
               </p>
             </div>
-            <img src="./img/icon-question-2.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-question-2.png" alt="" />
           </div>
         </div>
         <div class="accordion">
@@ -468,7 +476,7 @@
               A Fabulos está disponível apenas para pais ou qualquer
               pessoa pode usar o aplicativo?
             </p>
-            <img src="./img/icon-question.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-question.png" alt="" />
           </div>
           <div class="answer">
             <div class="content">
@@ -477,12 +485,12 @@
                 usar o aplicativo para criar histórias personalizadas
               </p>
             </div>
-            <img src="./img/icon-question-2.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-question-2.png" alt="" />
           </div>
         </div>
       </div>
       <div class="col">
-        <img src="./img/illustration-own.png" alt="" class="detail" />
+        <img src="<?php echo get_template_directory_uri(); ?>/img/illustration-own.png" alt="" class="detail" />
       </div>
     </div>
   </div>
@@ -490,14 +498,14 @@
 <section class="get-in-touch" id="get-in-touch">
   <div class="container">
     <div class="row">
-      <img src="./img/illustration-cloud.png" alt="" class="cloud" />
+      <img src="<?php echo get_template_directory_uri(); ?>/img/illustration-cloud.png" alt="" class="cloud" />
       <div class="col col-text">
         <h2>Ficou alguma dúvida?</h2>
         <p>Preencha o formulário e em breve entraremos em contato.</p>
       </div>
       <img
         class="detail-form"
-        src="./img/illustration-farmer.png"
+        src="<?php echo get_template_directory_uri(); ?>/img/illustration-farmer.png"
         alt=""
       />
       <div class="col col-form">

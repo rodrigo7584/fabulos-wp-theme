@@ -61,8 +61,9 @@ button:hover {
 /*custom fonts*/
 @font-face {
   font-family: 'bloomer';
-  src: url('../font/bloomer.otf');
+  src: url('./fonts/bloomer.otf');
 }
+
 
 /*end custom fonts*/
 :root {
@@ -133,7 +134,7 @@ li {
   display: block;
   width: 5rem;
   height: 4rem;
-  background-image: url(../img/icon-crown.png);
+  background-image: url('./img/icon-crown.png');
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
@@ -249,7 +250,8 @@ header.menu {
 }
 
 header.menu a.logo img {
-  height: 7rem;
+  height: 7rem !important;
+  width: auto !important;
 }
 
 header.menu nav ul {
@@ -279,7 +281,7 @@ header.menu .btn-mobile-menu {
 /*home*/
 section.home {
   position: relative;
-  background: url(../img/waves-top-bottom.png);
+  background: url('./img/waves-top-bottom.png');
   background-size: 100% 100%;
   background-position: top;
   background-repeat: no-repeat;
@@ -344,7 +346,7 @@ section.about-us::before {
   top: -9rem;
   height: 10rem;
   width: 100%;
-  background: url(../img/wave-white-top.svg);
+  background: url('./img/wave-white-top.svg');
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
@@ -356,7 +358,7 @@ section.about-us::after {
   bottom: -9rem;
   height: 10rem;
   width: 100%;
-  background: url(../img/wave-white-bottom.svg);
+  background: url('./img/wave-white-bottom.svg');
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
@@ -428,7 +430,7 @@ section.about-us .row-our-app .caroucel-our-app .slide {
 /*end about us */
 /*comments*/
 section.comments {
-  background: url('../img/waves-top.png');
+  background: url('./img/waves-top.png');
   background-size: 100% auto;
   background-position: top;
   background-repeat: no-repeat;
@@ -462,7 +464,7 @@ section.comments h2::after {
   position: absolute;
   right: -11rem;
   bottom: 2rem;
-  background-image: url('../img/illustration-medal.png');
+  background-image: url('./img/illustration-medal.png');
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
@@ -529,7 +531,7 @@ section.comments .text-after-caroucel-comments::before {
   position: absolute;
   left: -11rem;
   top: -2rem;
-  background-image: url('../img/illustration-medal-2.png');
+  background-image: url('./img/illustration-medal-2.png');
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
@@ -546,7 +548,7 @@ section.comments .btn-apple-store img {
 /*end comments*/
 /*faq*/
 section.faq {
-  background-image: url(../img/waves-right.png), url(../img/waves-left.png);
+  background-image: url('./img/waves-right.png'), url('./img/waves-left.png');
   background-repeat: no-repeat;
   background-size: auto 100%, auto 100%;
   background-position: right, left;
@@ -665,7 +667,7 @@ section.faq img.detail {
 /*end faq*/
 /*get in touch */
 section.get-in-touch {
-  background-image: url(../img/waves-bottom.png);
+  background-image: url('./img/waves-bottom.png');
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: bottom;
@@ -717,10 +719,12 @@ section.get-in-touch .detail-form {
   margin: 0 auto -14rem auto;
   grid-column: 1/2;
 }
+
 section.get-in-touch .col-form {
   grid-column: 2/3;
   grid-row: 1/3;
 }
+
 section.get-in-touch form {
   display: flex;
   flex-direction: column;
@@ -896,6 +900,7 @@ footer .get-in-touch-list li {
   section.faq .cloud2 {
     right: -16rem;
   }
+
   section.faq .airplane {
     right: 3rem;
   }
@@ -1015,10 +1020,12 @@ footer .get-in-touch-list li {
     width: 6rem;
     right: -6rem;
   }
+
   section.comments .text-after-caroucel-comments::before {
     width: 6rem;
     left: -7rem;
   }
+
   section.comments .cloud {
     top: -14rem;
   }
@@ -1029,14 +1036,17 @@ footer .get-in-touch-list li {
     width: 18rem;
     margin-top: 12rem;
   }
+
   /*get in touch*/
   section.get-in-touch {
     padding-bottom: 15rem;
   }
+
   section.get-in-touch .row {
     margin: 0 auto;
     width: 100%;
   }
+
   /*end get in touch*/
 }
 
@@ -1054,30 +1064,37 @@ footer .get-in-touch-list li {
       transform: translateX(0rem);
     }
   }
+
   .container {
     max-width: 400px;
     padding: 0 1rem;
   }
+
   /*home*/
   section.home .cloud {
     right: -12rem;
     width: 18rem;
     top: 6rem;
   }
+
   section.home .airplane {
     width: 10rem;
     top: 30rem;
     left: -3rem;
   }
+
   section.home .cloud2 {
     right: 13%;
   }
+
   section.home .home-illustration {
     width: 100%;
   }
+
   section.home h1 {
     width: 85%;
   }
+
   /*end home*/
   /*comments*/
   section.comments h2 {
@@ -1087,57 +1104,70 @@ footer .get-in-touch-list li {
     line-height: 1;
     margin: 0 0 2rem 0;
   }
+
   section.comments h2::after {
     right: -7rem;
   }
+
   section.comments .text-after-caroucel-comments {
     width: 80%;
     text-align: right;
     margin: 0 0 2rem auto;
   }
+
   section.comments .text-after-caroucel-comments::before {
     left: -6rem;
     top: 4rem;
   }
+
   /*end comments*/
   /*faq*/
   section.faq {
     padding-bottom: 10rem;
   }
+
   section.faq .airplane {
     bottom: -9rem;
     width: 13rem;
   }
+
   section.faq .cloud2 {
     right: -9rem;
   }
+
   section.faq img.detail {
     width: 6rem;
     margin-top: 25rem;
     /* display: none; */
   }
+
   /*end faq*/
   /*get in touch */
   section.get-in-touch {
     padding-bottom: 10rem;
   }
+
   section.get-in-touch .detail-form {
     order: 3;
   }
+
   section.get-in-touch .detail-form {
     height: 20rem;
     width: auto;
     margin: 0 auto -9rem auto;
   }
+
   section.get-in-touch .col-form {
     grid-column: 1/2;
     grid-row: auto;
     order: 2;
   }
+
   /*end get in touch*/
   section.get-in-touch .row {
     grid-template-columns: 1fr;
   }
+
   /*footer*/
   footer .row {
     grid-template-columns: repeat(2, 1fr);
@@ -1148,8 +1178,8 @@ footer .get-in-touch-list li {
     display: flex;
     justify-content: center;
   }
+
   /*end footer*/
 }
 
-@media (max-width: 400px) {
-}
+@media (max-width: 400px) {}
