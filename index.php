@@ -76,16 +76,29 @@
         />
       </div>
       <div class="col">
-        <h2 class="title-crown">Conheça a Fabulos</h2>
+        <h2 class="title-crown">
+          <?php if(get_theme_mod('setting_about_us_title')){
+            echo get_theme_mod('setting_about_us_title');
+          }else{
+            echo ('Conheça a Fabulos');
+          };?>
+        </h2>
         <p>
-          Com a Fabulos, seu filho terá histórias feitas especialmente
-          para ele, com personagens que ele adora e lições que você quer
-          ensinar.
+          <?php if(get_theme_mod('setting_about_description')){
+            echo get_theme_mod('setting_about_description');
+          }else{
+            echo('Com a Fabulos, seu filho terá histórias feitas especialmente para ele, 
+            com personagens que ele adora e lições que você quer ensinar.');
+          };?>
         </p>
         <br />
         <p>
-          <strong>Faça o download agora</strong> e comece a crie histórias
-          envolventes para seu filho!
+        <?php if(get_theme_mod('setting_about_headline')){
+            echo get_theme_mod('setting_about_headline');
+          }else{
+            echo('<strong>Faça o download agora</strong> e comece a crie histórias
+            envolventes para seu filho!');
+          };?>
         </p>
         <div class="box-buttons">
           <a href="#" class="btn btn-play-store"
@@ -101,13 +114,33 @@
   <div class="container">
     <div class="row row-our-app">
       <div class="col">
-        <h2 class="title-crown">Conheça nosso app</h2>
+        <h2 class="title-crown">
+        <?php if(get_theme_mod('setting_about_app_title')){
+            echo get_theme_mod('setting_about_app_title');
+          }else{
+            echo('Conheça nosso app');
+          };?>
+        </h2>
         <div class="caroucel caroucel-our-app">
           <div aria-label="Previous" class="controls btn btn-back">
             <img src="<?php echo get_template_directory_uri(); ?>/img/icon-right-arrow.png" alt="" />
           </div>
           <div class="caroucel-content">
-            <div class="slide slide-1">
+          <?php
+            $args = array( 'post_type' => 'carouselnossoapp');
+            $loop = new WP_Query( $args );
+            while ( $loop->have_posts() ) : $loop->the_post();
+          ?>
+            <div class="slide slide-<?php the_title();?>">
+              <?php the_post_thumbnail();
+              the_field( 'titulo' );?>
+
+            </div>
+          <?php
+            endwhile;
+            wp_reset_postdata();
+          ?>
+            <!-- <div class="slide slide-1">
               <img src="<?php echo get_template_directory_uri(); ?>/img/cellphone-1.png" alt="" />
             </div>
             <div class="slide slide-2">
@@ -118,7 +151,7 @@
             </div>
             <div class="slide slide-4">
               <img src="<?php echo get_template_directory_uri(); ?>/img/cellphone-4.png" alt="" />
-            </div>
+            </div> -->
           </div>
           <div aria-label="Next" class="controls btn btn-next">
             <img src="<?php echo get_template_directory_uri(); ?>/img/icon-left-arrow.png" alt="" />
@@ -134,7 +167,11 @@
       <img src="<?php echo get_template_directory_uri(); ?>/img/illustration-cloud.png" alt="" class="cloud" />
       <div class="col">
         <h2 class="title-crown">
-          Depoimentos de pais que já usaram o aplicativo:
+          <?php if(get_theme_mod('setting_comments_title')){
+            echo get_theme_mod('setting_comments_title');
+          }else{
+            echo('Depoimentos de pais que já usaram o aplicativo:');
+          };?>
         </h2>
       </div>
     </div>
@@ -145,7 +182,39 @@
             <img src="<?php echo get_template_directory_uri(); ?>/img/icon-right-arrow-2.png" alt="" />
           </div>
           <div class="caroucel-content">
-            <div class="slide slide-1">
+            <?php
+              $args = array( 'post_type' => 'carouseldepoimentos');
+              $loop = new WP_Query( $args );
+              while ( $loop->have_posts() ) : $loop->the_post();
+              ?>
+              <div class="slide <?php the_field('titulo');?>">
+                <div class="comment-box">
+                  <img
+                    src="<?php the_field( 'imagem' );?>"
+                    alt=""
+                    class="icon"
+                  />
+                  <p>
+                    <?php the_field('depoimento');?>
+                  </p>
+                  <div class="name-evaluation">
+                    <p>
+                      <?php the_field('autor');?>
+                    </p>
+                    <div class="evaluation">
+                      <?php 
+                      for($i = 1; $i <= get_field( 'classificacao' ); $i++){?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/icon-star.png" alt="" />
+                      <?php };?>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <?php
+              endwhile;
+              wp_reset_postdata();
+              ?>
+            <!-- <div class="slide slide-1">
               <div class="comment-box">
                 <img
                   src="<?php echo get_template_directory_uri(); ?>/img/icon-commentary.png"
@@ -236,7 +305,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
           <div aria-label="Next" class="controls btn btn-next">
             <img src="<?php echo get_template_directory_uri(); ?>/img/icon-left-arrow-2.png" alt="" />
@@ -247,10 +316,14 @@
     <div class="row">
       <div class="col">
         <p class="text-after-caroucel-comments">
-          <strong>Faça o download da Fabulos agora</strong> e comece a
-          criar histórias personalizadas para seu filho! <br />
-          Faça parte da nossa comunidade de pais que desejam estimular a
-          criatividade e se conectar com seus filhos.
+          <?php if(get_theme_mod('setting_comments_headline')){
+            echo get_theme_mod('setting_comments_headline');
+          }else{
+            echo('<strong>Faça o download da Fabulos agora</strong> e comece a
+            criar histórias personalizadas para seu filho! <br />
+            Faça parte da nossa comunidade de pais que desejam estimular a
+            criatividade e se conectar com seus filhos.');
+          };?>
         </p>
         <div class="box-buttons">
           <a href="#" class="btn btn-play-store"
@@ -275,7 +348,37 @@
         class="airplane"
       />
       <div class="col">
-        <h2 class="title-crown">FAQ</h2>
+        <h2 class="title-crown"> 
+          <?php if(get_theme_mod('setting_faq_title')){
+            echo get_theme_mod('setting_faq_title');
+          }else{
+            echo('FAQ');
+          };?>
+        </h2>
+        <?php
+          $args = array( 'post_type' => 'faq');
+          $loop = new WP_Query( $args );
+          while ( $loop->have_posts() ) : $loop->the_post();
+          ?>
+          <div class="accordion">
+            <div class="question">
+              <p><?php the_title();?></p>
+              <img src="<?php echo get_template_directory_uri(); ?>/img/icon-question.png" alt="" />
+            </div>
+            <div class="answer">
+              <div class="content">
+           
+                  <?php the_content();?>
+                
+              </div>
+
+              <img src="<?php echo get_template_directory_uri(); ?>/img/icon-question-2.png" alt="" />
+            </div>
+          </div>
+          <?php
+          endwhile;
+          wp_reset_postdata();
+        ?>
         <div class="accordion">
           <div class="question">
             <p>O que é Fabulos?</p>
@@ -500,8 +603,20 @@
     <div class="row">
       <img src="<?php echo get_template_directory_uri(); ?>/img/illustration-cloud.png" alt="" class="cloud" />
       <div class="col col-text">
-        <h2>Ficou alguma dúvida?</h2>
-        <p>Preencha o formulário e em breve entraremos em contato.</p>
+        <h2>
+          <?php if(get_theme_mod('setting_get_in_touch_title')){
+            echo get_theme_mod('setting_get_in_touch_title');
+          }else{
+            echo('Ficou alguma dúvida?');
+          };?>
+        </h2>
+        <p>
+          <?php if(get_theme_mod('setting_get_in_touch_subtitle')){
+            echo get_theme_mod('setting_get_in_touch_subtitle');
+          }else{
+            echo('Preencha o formulário e em breve entraremos em contato.');
+          };?>
+        </p>
       </div>
       <img
         class="detail-form"
@@ -510,7 +625,13 @@
       />
       <div class="col col-form">
         <form
-          action="https://formsubmit.co/rodrigo.gandhi.oliveira@gmail.com"
+          action="https://formsubmit.co/<?php
+            if(get_theme_mod('setting_get_in_touch_email')){
+              echo get_theme_mod('setting_get_in_touch_email');
+            }else{
+              echo ('rodrigo.gandhi.oliveira@gmail.com');
+            };
+          ?>"
           method="POST"
         >
           <input type="name" name="name" placeholder="Nome" />

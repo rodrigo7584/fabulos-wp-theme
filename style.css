@@ -64,7 +64,6 @@ button:hover {
   src: url('./fonts/bloomer.otf');
 }
 
-
 /*end custom fonts*/
 :root {
   font-family: 'Nunito', sans-serif;
@@ -426,7 +425,10 @@ section.about-us .row-our-app .caroucel-our-app .slide {
   justify-content: center;
   align-items: center;
 }
-
+section.about-us .row-our-app .caroucel-our-app .slide img {
+  width: 100% !important;
+  height: auto !important;
+}
 /*end about us */
 /*comments*/
 section.comments {
@@ -1182,4 +1184,5 @@ footer .get-in-touch-list li {
   /*end footer*/
 }
 
-@media (max-width: 400px) {}
+@media (max-width: 400px) {
+}
