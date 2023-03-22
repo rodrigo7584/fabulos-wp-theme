@@ -315,7 +315,7 @@
                
       ));
     }
-   add_action('init', 'caroucel_our_app');
+   add_action('init', 'caroucel_comments');
 
    function duvidas(){
       register_post_type('FAQ',array(
