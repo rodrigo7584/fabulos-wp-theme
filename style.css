@@ -237,15 +237,19 @@ a:hover {
 
 /*end caroucel*/
 /*header*/
-header.menu {
-  width: 100%;
-  padding: 1.5rem 0;
+body section:first-of-type {
+  padding-top: 16rem;
 }
 
 header.menu {
+  width: 100%;
+  padding: 1.5rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 10;
+  margin-bottom: -16rem;
 }
 
 header.menu a.logo img {
@@ -425,10 +429,12 @@ section.about-us .row-our-app .caroucel-our-app .slide {
   justify-content: center;
   align-items: center;
 }
+
 section.about-us .row-our-app .caroucel-our-app .slide img {
   width: 100% !important;
   height: auto !important;
 }
+
 /*end about us */
 /*comments*/
 section.comments {
@@ -1184,5 +1190,4 @@ footer .get-in-touch-list li {
   /*end footer*/
 }
 
-@media (max-width: 400px) {
-}
+@media (max-width: 400px) {}

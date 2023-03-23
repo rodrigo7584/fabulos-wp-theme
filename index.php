@@ -1,7 +1,7 @@
 <?php get_header();?>
 <section class="home" id="home">
   <div class="container">
-    <header class="menu" data-aos="fade-down">
+    <!-- <header class="menu" data-aos="fade-down">
       <a href="#home" class="logo">
         <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="" />
       </a>
@@ -23,7 +23,7 @@
           </li>
         </ul>
       </nav>
-    </header>
+    </header> -->
     <div class="row">
       <img
         src="<?php echo get_template_directory_uri(); ?>/img/illustration-paper-plane.png"
