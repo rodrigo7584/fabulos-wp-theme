@@ -17,7 +17,7 @@
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#get-in-touch">Contato</a></li>
           <li>
-            <a target="_blank" href="#" class="btn btn-pink"
+            <a href="#about-us" class="btn btn-pink"
               >Conheça a Fabulos</a
             >
           </li>
@@ -49,8 +49,8 @@
         };?>
         </p>
         <div class="box-buttons">
-          <a href="#" class="btn btn-pink">Conheça a Fabulos</a>
-          <a href="#" class="btn btn-border-white">Fale com a gente</a>
+          <a href="#about-us" class="btn btn-pink">Conheça a Fabulos</a>
+          <a href="#get-in-touch" class="btn btn-border-white">Fale com a gente</a>
         </div>
       </div>
       <div class="col">
@@ -101,10 +101,10 @@
           };?>
         </p>
         <div class="box-buttons">
-          <a href="#" class="btn btn-play-store"
+          <a href="<?php echo get_theme_mod('setting_android_store_link')?>" class="btn btn-play-store"
             ><img src="<?php echo get_template_directory_uri(); ?>/img/google-play-badge.svg" alt=""
           /></a>
-          <a href="#" class="btn btn-apple-store"
+          <a href="<?php echo get_theme_mod('setting_apple_store_link')?>" class="btn btn-apple-store"
             ><img src="<?php echo get_template_directory_uri(); ?>/img/apple-store-badge.svg" alt=""
           /></a>
         </div>
@@ -220,10 +220,10 @@
           };?>
         </p>
         <div class="box-buttons">
-          <a href="#" class="btn btn-play-store"
+          <a href="<?php echo get_theme_mod('setting_android_store_link')?>" class="btn btn-play-store"
             ><img src="<?php echo get_template_directory_uri(); ?>/img/google-play-badge.svg" alt=""
           /></a>
-          <a href="#" class="btn btn-apple-store"
+          <a href="<?php echo get_theme_mod('setting_apple_store_link')?>" class="btn btn-apple-store"
             ><img src="<?php echo get_template_directory_uri(); ?>/img/apple-store-badge.svg" alt=""
           /></a>
         </div>

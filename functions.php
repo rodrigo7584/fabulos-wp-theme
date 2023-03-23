@@ -44,6 +44,42 @@
             'type' => 'textarea'
          )
       );
+      //playstore link
+      $wp_customize->add_setting(
+         'setting_android_store_link',
+         array(
+            'type'=>'theme_mod',
+            'default'=>'',
+            'sanitize_callback'=> ''
+         )
+      );
+      $wp_customize->add_control(
+         'setting_android_store_link',
+         array(
+            'label' => 'Link PlayStore',
+            'description' => 'Digite o link da PlayStore',
+            'section' => 'section_home',
+            'type' => 'text'
+         )
+      );
+        //playstore link
+        $wp_customize->add_setting(
+         'setting_apple_store_link',
+         array(
+            'type'=>'theme_mod',
+            'default'=>'',
+            'sanitize_callback'=> ''
+         )
+      );
+      $wp_customize->add_control(
+         'setting_apple_store_link',
+         array(
+            'label' => 'Link AppleStore',
+            'description' => 'Digite o link da AppleStore',
+            'section' => 'section_home',
+            'type' => 'text'
+         )
+      );
       //end section home
 
       
@@ -291,13 +327,16 @@
          'labels'=>array(
             'name' => 'Prints',
             'singular_name' => 'Print',
+            'add_new' => 'Novo Print',
+            'add_new_item' => 'Adicionar um novo Print',
+            'edit_item' => 'Editar Print'
          ),
          'description' => 'Adicione prints da aplicação',
          'public' => true,
          'menu_position' => 20,
          'has_archive' => true,
          'supports' => array('title'),
-               
+         'menu_icon' => 'dashicons-format-image',      
       ));
     }
    add_action('init', 'caroucel_our_app');
@@ -306,13 +345,16 @@
          'labels'=>array(
             'name' => 'Depoimentos',
             'singular_name' => 'Depoimento',
+            'add_new' => 'Novo depoimento',
+            'add_new_item' => 'Adicionar um novo depoimento',
+            'edit_item' => 'Editar depoimento'
          ),
          'description' => 'Adicione os depoimentos',
          'public' => true,
          'menu_position' => 21,
          'has_archive' => true,
          'supports' => array('title'),
-               
+         'menu_icon' => 'dashicons-format-quote',    
       ));
     }
    add_action('init', 'caroucel_comments');
@@ -322,13 +364,16 @@
          'labels'=>array(
             'name' => 'Dúvidas',
             'singular_name' => 'Dúvida',
+            'add_new' => 'Novo dúvida',
+            'add_new_item' => 'Adicionar uma nova dúvida',
+            'edit_item' => 'Editar dúvida'
          ),
          'description' => 'Adicione uma dúvida',
          'public' => true,
          'menu_position' => 21,
          'has_archive' => true,
          'supports' => array('title','editor'),
-               
+         'menu_icon' => 'dashicons-editor-help',    
       ));
     }
    add_action('init', 'duvidas');
